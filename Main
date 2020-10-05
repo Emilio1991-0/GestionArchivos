@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Menu();
+		
+	CrearArchivo cr = new CrearArchivo();
+	cr.Crear(args);
+	
+	EliminarArchivo el = new EliminarArchivo();
+	el.Eliminar(args);
+	
+	}
+
+	static void Menu() {
+		Scanner sn = new Scanner(System.in);
+		boolean salir = false;
+		int opcion; // Guardaremos la opcion del usuario
+
+		while (!salir) {
+
+			System.out.println("Opcion 1: Copiar archivos");
+			System.out.println("Opcion 2: Crear un fichero");
+			System.out.println("Opcion 3: Borrar un fichero");
+			System.out.println("Opcion 4: Contenido de un fichero de texto");
+			System.out.println("Opcion 5: Salir");
+			 opcion = sn.nextInt();
+		}
+	}
+
+}
