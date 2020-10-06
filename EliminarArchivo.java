@@ -2,10 +2,6 @@ import java.io.File;
 import java.util.Scanner;
 
 public class EliminarArchivo {
-
-	public static void main(String[] args) {
-		
-	}
 	
 	public static void Eliminar() {
 		
