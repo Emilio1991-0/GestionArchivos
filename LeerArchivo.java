@@ -1,33 +1,38 @@
-
 import java.io.File;
-
 import java.util.Scanner;
 
 public class LeerArchivo {
+
 	public static void main(String[] args) {
 		
-		File fichero = new File("Ejercicio1.txt");
-		Scanner s = null;
+	}
+	
+	public static void Leer() {
+		
+		File archivo = new File("archivo.txt");
+		Scanner teclado = null;
 
 		try {
 			
 			System.out.println("Leemos el contenido del fichero");
-			s = new Scanner(fichero);
+			teclado = new Scanner(archivo);
 			
-			while (s.hasNextLine()) {
-				String linea = s.nextLine(); 
+			while (teclado.hasNextLine()) {
+				String linea = teclado.nextLine(); 
 				System.out.println(linea); 
 			}
 
-		} catch (Exception ex) {
-			System.out.println("Mensaje: " + ex.getMessage());
+		} catch (Exception e) {
+			System.out.println("Mensaje: " + e.getMessage());
 		} finally {			
 			try {
-				if (s != null)
-					s.close();
-			} catch (Exception ex2) {
-				System.out.println("Mensaje 2: " + ex2.getMessage());
+				if (teclado != null)
+					teclado.close();
+			} catch (Exception e2) {
+				System.out.println("Mensaje 2: " + e2.getMessage());
 			}
 		}
+		
 	}
+	
 }
