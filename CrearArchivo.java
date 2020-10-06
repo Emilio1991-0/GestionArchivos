@@ -5,10 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class CrearArchivo {
-
-	public static void main(String[] args) {
-		
-	}
 	
 	public static void Crear() throws IOException {
 		
