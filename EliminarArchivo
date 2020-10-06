@@ -8,7 +8,7 @@ public class EliminarArchivo {
 
             File archivo = new File("C:\\practicas\\Ejercicio1.txt");
 
-            boolean estatus = archivo.delete();;
+            boolean estatus = archivo.delete();
 
             if (!estatus) {
 
