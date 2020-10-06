@@ -1,55 +1,53 @@
+import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+public class main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		Menu();
-		int opcion = 0;
 		
-		switch (opcion) {
-		case 1:
-			copiar
-			
-			break;
-		case 2:
-			CrearArchivo cr = new CrearArchivo();
-			cr.main(args);
-			break;
-		case 3:
-			EliminarArchivo el = new EliminarArchivo();
-			el.Eliminar(args);
-			
-			break;
-		case 4:
-			LeerArchivo le = new LeerArchivo();
-			le.main(args);
-			
-			break;
-		case 5:
-		salir
-			
-			break;
-
-		default:
-			break;
-		}		
 	}
 
-	static void Menu() {
+	static void Menu() throws IOException {
+		
 		Scanner teclado = new Scanner(System.in);
 		boolean salir = false;
-		int opcion; // Guardaremos la opcion del usuario
+		int opcion;
 
 		while (!salir) {
 
-			System.out.println("Opcion 1: Copiar archivos");
-			System.out.println("Opcion 2: Crear un fichero");
-			System.out.println("Opcion 3: Borrar un fichero");
-			System.out.println("Opcion 4: Contenido de un fichero de texto");
-			System.out.println("Opcion 5: Salir");
-			 opcion = teclado.nextInt();
-			 teclado.close();
+			System.out.println("1: Copiar un fichero");
+			System.out.println("2: Crear un fichero");
+			System.out.println("3: Eliminar un fichero");
+			System.out.println("4: Mostrar contenido de un fichero");
+			System.out.println("5: Salir");
+			opcion = teclado.nextInt();
+			
+			switch (opcion) {
+			case 1:
+				CopiarArchivo.Copiar();
+				
+				break;
+			case 2:
+				CrearArchivo.Crear();
+				break;
+			case 3:
+				EliminarArchivo.Eliminar();
+				
+				break;
+			case 4:
+				LeerArchivo.Leer();
+				
+				break;
+			case 5:
+				salir = true;
+				
+				break;
+			}		
+			
 		}
+		
 	}
+
 }
